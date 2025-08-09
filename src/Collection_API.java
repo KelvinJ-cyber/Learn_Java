@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Collection_API {
 
@@ -55,6 +56,16 @@ public class Collection_API {
         map.put("David", 20);
 
         System.out.println(map);
+
+        List<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(10);
+        list.add(30);
+        list.add(15);
+
+        Stream<Integer> s1= list.stream()
+                .filter(n -> n%2 == 0);
+        s1.forEach(System.out::println);
     }
 
 }
